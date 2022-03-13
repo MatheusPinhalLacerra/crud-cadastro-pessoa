@@ -1,3 +1,8 @@
+@extends('master')
+
+@section('title', 'Cadastro')
+@section('content')
+
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo" id="logo-test">
@@ -60,3 +65,5 @@
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
+
+@endsection

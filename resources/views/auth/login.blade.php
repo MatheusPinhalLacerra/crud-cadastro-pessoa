@@ -1,7 +1,11 @@
+@extends('master')
+
+@section('title', 'Login')
+@section('content')
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <img src="img/logo.png" alt="logo ecode" id="logo-register">
+            <img src="img/logo.png" alt="logo ecode" id="logo-login">
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -46,3 +50,4 @@
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
+@endsection

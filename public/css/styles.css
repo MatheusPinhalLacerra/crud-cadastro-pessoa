@@ -58,13 +58,25 @@ h3 span{
 }
 /* Fim Header */
 
-
-/* Register blade */
-
-#logo-test{
-    width: 100px !important;
+#logo-register,#logo-login{
+    width: 200px;
 }
-#logo-register{
 
+
+#container-home{
+    padding-top: 30px;
+    color: #1f2937;
 }
-/* Register blade */
+
+#div-h2{
+    color: #fff;
+    background: #1f2937;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.test{
+    display: flex;
+    text-align: center;
+}
