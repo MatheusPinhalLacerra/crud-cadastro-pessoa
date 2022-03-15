@@ -1,8 +1,8 @@
 <h3>CRUD Cadastro de Pessoa</h3>
 
-<h6>Desenvolvimento</h6>
+<h6>Ferramentas de Desenvolvimento</h6>
 <p>Framework Laravel 9</p>
-<p>MVC</p>
+<p>Estrutura do projeto MVC</p>
 <p>Jetstream e Livewire</p>
 
 
