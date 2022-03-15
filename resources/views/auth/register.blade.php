@@ -79,16 +79,18 @@
                     </div>
                 </div>
 
-                <div style="margin-top: 20px">
-                    <x-jet-label for="rua" value="{{ __('Rua') }}" />
-                    <x-jet-input id="rua" class="block mt-1 w-full" type="text" name="rua"/>
-                </div>
+
 
                 <div>
                     <div class="col-6" style="margin-top: 20px">
                         <x-jet-label for="cep" value="{{ __('Digite seu CEP *') }}" />
                         <x-jet-input id="cep" class="cep block mt-1 w-full" type="text" name="cep" value="" size="10"
                             maxlength="9" onblur="pesquisacep(this.value);" />
+                    </div>
+
+                    <div style="margin-top: 20px">
+                        <x-jet-label for="rua" value="{{ __('Rua') }}" />
+                        <x-jet-input id="rua" class="block mt-1 w-full" type="text" name="rua"/>
                     </div>
 
                     <div class="row" style="margin-top: 20px">
