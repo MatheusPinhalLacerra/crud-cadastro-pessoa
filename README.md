@@ -1,15 +1,15 @@
 <h3>CRUD Cadastro de Pessoa</h3>
 
-<h4>Desenvolvimento</h4>
+<h6>Desenvolvimento</h6>
 <p>Framework Laravel 9</p>
 <p>MVC</p>
 <p>Jetstream e Livewire</p>
 
 
-<h4>Banco de Dados</h4>
+<h6>Banco de Dados</h6>
 <p>MySQL</p>
 
-<h4>Servidor e Sistema</h4>
+<h6>Servidor e Sistema</h6>
 <p>Apache</p>
 <p>PHP 8</p>
 <p>Windows</p>
