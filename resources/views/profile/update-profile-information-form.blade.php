@@ -1,5 +1,4 @@
 
-
 <x-jet-form-section submit="updateProfileInformation">
     <div class="test">
         <x-slot name="title">
@@ -51,7 +50,7 @@
                 <x-jet-input-error for="telefone" class="mt-2" />
             </div>
 
-             <div class="col-span-6 sm:col-span-4">
+            <div class="col-span-6 sm:col-span-4">
                 <x-jet-label for="celular" value="{{ __('Celular') }}" />
                 <x-jet-input id="celular" type="text" class="mt-1 block w-full" wire:model.defer="state.celular" />
                 <x-jet-input-error for="celular" class="mt-2" />
@@ -63,6 +62,47 @@
                 <x-jet-input-error for="email" class="mt-2" />
             </div>
 
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="cep" value="{{ __('CEP') }}" />
+                <x-jet-input id="cep" type="text" class="mt-1 block w-full" wire:model.defer="state.cep" />
+                <x-jet-input-error for="cep" class="mt-2"  maxlength="9" onblur="pesquisacep(this.value);" />
+            </div>
+
+             <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="rua" value="{{ __('Rua') }}" />
+                <x-jet-input id="rua" type="text" class="mt-1 block w-full" wire:model.defer="state.rua" />
+                <x-jet-input-error for="rua" class="mt-2" />
+            </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="numero" value="{{ __('Numero') }}" />
+                <x-jet-input id="numero" type="text" class="mt-1 block w-full" wire:model.defer="state.numero" />
+                <x-jet-input-error for="numero" class="mt-2" />
+            </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="bairro" value="{{ __('Bairro') }}" />
+                <x-jet-input id="bairro" type="text" class="mt-1 block w-full" wire:model.defer="state.bairro" />
+                <x-jet-input-error for="bairro" class="mt-2" />
+            </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="uf" value="{{ __('Estado') }}" />
+                <x-jet-input id="uf" type="text" class="mt-1 block w-full" wire:model.defer="state.uf" />
+                <x-jet-input-error for="uf" class="mt-2" />
+            </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="cidade" value="{{ __('Cidade') }}" />
+                <x-jet-input id="cidade" type="text" class="mt-1 block w-full" wire:model.defer="state.cidade" />
+                <x-jet-input-error for="cidade" class="mt-2" />
+            </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="complemento" value="{{ __('Complemento') }}" />
+                <x-jet-input id="complemento" type="text" class="mt-1 block w-full" wire:model.defer="state.complemento" />
+                <x-jet-input-error for="complemento" class="mt-2" />
+            </div>
 
 
         </x-slot>

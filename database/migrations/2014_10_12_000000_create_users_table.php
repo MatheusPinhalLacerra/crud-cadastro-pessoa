@@ -22,6 +22,13 @@ return new class extends Migration
             $table->string('cpf');
             $table->string('telefone');
             $table->string('celular');
+            $table->string('cep');
+            $table->string('rua');
+            $table->string('numero');
+            $table->string('bairro');
+            $table->string('complemento');
+            $table->string('uf');
+            $table->string('cidade');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

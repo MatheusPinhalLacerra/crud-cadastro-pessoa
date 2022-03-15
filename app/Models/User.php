@@ -33,6 +33,13 @@ class User extends Authenticatable
         'celular',
         'email',
         'password',
+        'cep',
+        'rua',
+        'numero',
+        'bairro',
+        'complemento',
+        'uf',
+        'cidade',
 
     ];
 

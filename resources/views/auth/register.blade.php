@@ -14,10 +14,29 @@
             <form method="POST" action="{{ route('register') }}">
                 @csrf
 
-                <div>
+                <div style="margin-top: 20px">
                     <x-jet-label for="name" value="{{ __('Nome') }}" />
                     <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" />
                 </div>
+
+                <div class="mt-4">
+                    <x-jet-label for="email" value="{{ __('Email') }}" />
+                    <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
+                        required />
+                </div>
+
+                <div class="mt-4">
+                    <x-jet-label for="password" value="{{ __('Senha') }}" />
+                    <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required
+                        autocomplete="new-password" />
+                </div>
+
+                <div class="mt-4">
+                    <x-jet-label for="password_confirmation" value="{{ __('Confirmar Senha') }}" />
+                    <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password"
+                        name="password_confirmation" required autocomplete="new-password" />
+                </div>
+
 
                 <div class="row" style="margin-top: 20px">
                     <div class=" col-6">
@@ -60,26 +79,53 @@
                     </div>
                 </div>
 
-                <div class="mt-4">
-                    <x-jet-label for="email" value="{{ __('Email') }}" />
-                    <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                        required />
+                <div style="margin-top: 20px">
+                    <x-jet-label for="rua" value="{{ __('Rua') }}" />
+                    <x-jet-input id="rua" class="block mt-1 w-full" type="text" name="rua"/>
                 </div>
 
-                <div class="mt-4">
-                    <x-jet-label for="password" value="{{ __('Senha') }}" />
-                    <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                        autocomplete="new-password" />
+                <div>
+                    <div class="col-6" style="margin-top: 20px">
+                        <x-jet-label for="cep" value="{{ __('Digite seu CEP *') }}" />
+                        <x-jet-input id="cep" class="cep block mt-1 w-full" type="text" name="cep" value="" size="10"
+                            maxlength="9" onblur="pesquisacep(this.value);" />
+                    </div>
+
+                    <div class="row" style="margin-top: 20px">
+                        <div class="col-6" >
+                            <x-jet-label for="numero" value="{{ __('Número') }}" />
+                            <x-jet-input id="numero" class="cep block mt-1 w-full" type="text" name="numero" value=""
+                                size="60" />
+                        </div>
+
+                        <div class="col-6">
+                            <x-jet-label for="bairro" value="{{ __('Bairro') }}" />
+                            <x-jet-input id="bairro" class="cep block mt-1 w-full" type="text" name="bairro" value=""
+                                size="60" />
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <x-jet-label for="complemento" value="{{ __('Complemento') }}" />
+                        <x-jet-input id="complemento" class="cep block mt-1 w-full" type="text" name="complemento" size="60" />
+                    </div>
+
+
+                    <div class="row" style="margin-top: 20px">
+                        <div class="col-6">
+                            <x-jet-label for="uf" value="{{ __('Estado') }}" />
+                            <x-jet-input id="uf" class="cep block mt-1 w-full" type="text" name="uf" size="2" />
+                        </div>
+
+                        <div class="col-6">
+                            <x-jet-label for="cidade" value="{{ __('Cidade') }}" />
+                            <x-jet-input id="cidade" class="cep block mt-1 w-full" type="text" name="cidade" value=""
+                                size="60" />
+                        </div>
+
+                    </div>
+
                 </div>
-
-                <div class="mt-4">
-                    <x-jet-label for="password_confirmation" value="{{ __('Confirmar Senha') }}" />
-                    <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password"
-                        name="password_confirmation" required autocomplete="new-password" />
-                </div>
-
-
-
                 @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                     <div class="mt-4">
                         <x-jet-label for="terms">
